@@ -2,9 +2,11 @@
 nav{
     display: flex;
     flex-direction: column;
+    width: 100%;
 }main{
     display: grid;
     grid-template-rows: auto 1fr 1fr auto;
+    width: 100%;
 }
 .nav--first--section{
     display: flex;
@@ -72,4 +74,19 @@ li{
 
 .nav--second--section--item--logo{
     margin-right: auto;
+}
+
+.nav--third--section{
+ background-color: #F53E32;
+ display: flex;
+ justify-content:space-evenly;
+}
+
+.nav--third--section--text{
+    color:white;
+}
+
+.section--product--info{
+    display: grid;
+    grid-template-columns: 25% 1fr;
 }
