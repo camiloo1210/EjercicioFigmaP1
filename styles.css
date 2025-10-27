@@ -56,12 +56,12 @@ li{
     border: #64B496 2px solid;
     border-top-left-radius: 10px;
     border-bottom-left-radius: 10px;
-    padding: 1rem;
+    
     border-right: none;
 }
 .nav--second--section--select{
     border: #64B496 2px solid;
-    padding: 1rem;
+    
     border-right: none;
 }
 
@@ -89,4 +89,103 @@ li{
 .section--product--info{
     display: grid;
     grid-template-columns: 25% 1fr;
+}
+
+.section--product--info--sidebar{
+    display: flex;
+    flex-direction: column;
+    background-color: #F7F7F8;
+    margin: 2rem;
+    align-items: center;
+    border: solid 1px grey;
+    border-radius: 2rem;
+}
+
+.section--product--info--sidebar--categories{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+
+}
+
+.section--product--info--sidebar--categories--item{
+    display: flex;
+    gap: 1rem;
+}
+
+.section--product--info--sidebar--price--filter{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+}
+.section--product--info--sidebar--price--filter--range{
+    width: 100%;
+    accent-color: #F53E32;
+}
+.section--product--info--sidebar--price--filter--button{
+    align-self: flex-start;
+    background-color: #F53E32;
+    width: 80%;
+    border: none;
+    
+    color: white;
+    border-radius: 0.5rem;
+}
+
+.section--product--info--sidebar--filter--category--color{
+    
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.section--product--info--sidebar--filter--category--color--list{
+    display: flex;
+    flex-direction: column;
+    
+}
+
+.section--product--info--sidebar--filter--category--color--list--item{
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+}
+
+.section--product--info--sidebar--filter--category--color--list--item--colorbox{
+    width: 1rem;
+    height: 1rem;
+    border: 1px solid none;
+    border-radius: 10%;
+}
+
+.section--product--info--sidebar--filter--weight{
+    
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+.section--product--info--sidebar--filter--weight--list{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.section--product--info--sidebar--filter--weight--list--item{
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    justify-content: center;
+}
+
+.section--product--info--sidebar--filter--tags--list{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 0.5rem;
+}
+.section--product--info--sidebar--filter--tags--list--item{
+  border: 1px solid black;
+  border-radius: 10%;
+  padding: 0.5rem 1rem;
+  text-align: center;
 }
