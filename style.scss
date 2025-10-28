@@ -1,0 +1,542 @@
+
+// ====== Colors ======
+$primary-color: #F53E32;
+$secondary-color: #64B496;
+$background-light: #F7F7F8;
+$border-color: #E2E2E2;
+$text-color: #333;
+$text-light: white;
+$text-muted: grey;
+$price-color: #FB5555;
+
+// ====== Borders ======
+$border-radius-sm: 5px;
+$border-radius-md: 10px;
+$border-radius-lg: 1rem;
+
+// ====== Breakpoints ======
+$breakpoint-mobile: 768px;
+
+
+
+main {
+    display: grid;
+    grid-template-rows: auto 1fr auto auto;
+    width: 100%;
+    gap: 1rem;
+}
+
+li {
+    list-style: none;
+}
+
+
+
+/* Bloque: nav */
+.nav {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+
+    &__section {
+        display: flex;
+        align-items: center;
+
+        &--top {
+            box-shadow: $border-color 0px 4px 4px -2px;
+        }
+
+        &--main {
+            margin: 0 2rem;
+            justify-content: space-between;
+
+            @media (max-width: $breakpoint-mobile) {
+                flex-direction: column;
+                gap: 1.5rem;
+                margin: 1rem;
+            }
+        }
+
+        &--breadcrumb {
+            background-color: $primary-color;
+            justify-content: space-evenly;
+            color: $text-light;
+        }
+    }
+
+    &__list {
+        display: flex;
+        gap: 1rem;
+        align-items: center;
+        width: 100%;
+        padding: 0;
+        margin: 0;
+        
+        @media (max-width: $breakpoint-mobile) {
+            flex-wrap: wrap;
+            padding: 0.5rem 1rem;
+        }
+    }
+
+    &__item {
+        display: flex;
+        align-items: center;
+        cursor: pointer;
+
+        &--menu-toggle {
+            margin-right: auto;
+        }
+
+        &--phone {
+            margin-left: auto;
+            margin-right: 3%;
+        }
+    }
+
+    &__icon {
+        width: 1rem;
+        height: 1rem;
+    }
+
+    &__logo {
+        margin-right: auto;
+    }
+}
+
+/* Bloque: search-bar */
+.search-bar {
+    display: flex;
+    align-items: stretch;
+    
+    @media (max-width: $breakpoint-mobile) {
+        width: 100%;
+        flex-wrap: wrap;
+    }
+
+    &__input {
+        border: $secondary-color 2px solid;
+        border-radius: $border-radius-md 0 0 $border-radius-md;
+        border-right: none;
+        padding: 0.5rem;
+        
+        @media (max-width: $breakpoint-mobile) {
+            flex-grow: 1; 
+        }
+    }
+
+    &__select {
+        border: $secondary-color 2px solid;
+        border-right: none;
+        padding: 0.5rem;
+    }
+
+    &__button {
+        background-color: $primary-color;
+        border: none;
+        border-radius: 0 $border-radius-md $border-radius-md 0;
+        padding: 1rem;
+        cursor: pointer;
+    }
+}
+
+/* Bloque: user-actions */
+.user-actions {
+    display: flex;
+    margin-left: auto;
+    gap: 2rem;
+    padding: 0;
+    
+    @media (max-width: $breakpoint-mobile) {
+        justify-content: space-around;
+        width: 100%;
+    }
+
+    &__item {
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+    }
+}
+
+/* Bloque: product */
+.product {
+    display: grid;
+    grid-template-columns: 25% 1fr;
+    gap: 2rem;
+    
+    @media (max-width: $breakpoint-mobile) {
+        grid-template-columns: 1fr;
+    }
+
+    &__content {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
+
+    &__main-view {
+        display: flex;
+        width: 100%;
+        
+        @media (max-width: $breakpoint-mobile) {
+            flex-direction: column;
+        }
+    }
+}
+
+/* Bloque: filter-sidebar */
+.filter-sidebar {
+    display: flex;
+    flex-direction: column;
+    background-color: $background-light;
+    margin: 2rem;
+    align-items: center;
+    border: solid 1px $text-muted;
+    border-radius: 2rem;
+    padding: 1rem;
+    
+    @media (max-width: $breakpoint-mobile) {
+        margin: 0 1rem;
+    }
+
+    &__group {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+        margin-bottom: 1.5rem;
+    }
+
+    &__divider {
+        width: 75%;
+        border: 1px solid #e0e0e0;
+    }
+
+    &__list {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+        padding: 0;
+    }
+
+    &__item {
+        display: flex;
+        gap: 1rem;
+        align-items: center;
+    }
+
+    &__price-range {
+        width: 100%;
+        accent-color: $primary-color;
+    }
+
+    &__button {
+        background-color: $primary-color;
+        width: 80%;
+        border: none;
+        color: $text-light;
+        border-radius: $border-radius-sm;
+        padding: 0.5rem;
+        cursor: pointer;
+
+        @media (max-width: $breakpoint-mobile) {
+            margin-left: auto;
+            margin-right: auto;
+            text-align: center;
+        }
+    }
+
+    &__color-box {
+        width: 1rem;
+        height: 1rem;
+        border: 1px solid #ccc;
+        border-radius: 10%;
+    }
+
+    &__tags-list {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 0.5rem;
+        padding: 0;
+    }
+
+    &__tag {
+        border: 1px solid $text-color;
+        border-radius: 10%;
+        padding: 0.5rem 1rem;
+        text-align: center;
+        cursor: pointer;
+    }
+}
+
+/* Bloque: product-gallery */
+.product-gallery {
+    flex: 1;
+
+    &__main-frame {
+        margin-top: 2rem;
+        height: 80%;
+        width: 100%;
+        background-color: $background-light;
+        border-radius: 2rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    &__main-image {
+        width: 90%;
+        height: 90%;
+        object-fit: contain;
+    }
+
+    &__carousel {
+        display: flex;
+        gap: 1rem;
+        margin-top: 2rem;
+    }
+
+    &__carousel-frame {
+        height: 100px;
+        width: 100px;
+        background-color: $background-light;
+        border: solid 1px #ddd;
+        border-radius: $border-radius-lg;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    &__carousel-image {
+        width: 90%;
+        height: 90%;
+        object-fit: contain;
+    }
+}
+
+/* Bloque: product-details */
+.product-details {
+    margin: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    flex: 1;
+
+    &__title, &__subtitle {
+        margin: 0;
+    }
+
+    &__title {
+        font-size: large;
+    }
+
+    &__divider {
+        width: 100%;
+    }
+
+    &__review-stars {
+        display: flex;
+        gap: 0.5%;
+        align-items: center;
+    }
+
+    &__info-list {
+        padding: 0;
+        margin: 0;
+    }
+
+    &__info-item {
+        display: flex;
+        gap: 0.5rem;
+        align-items: center;
+    }
+
+    &__price-section {
+        display: flex;
+        gap: 2%;
+        align-items: center;
+    }
+
+    &__price {
+        &--current {
+            color: $price-color;
+            font-size: xx-large;
+        }
+        &--old {
+            margin-left: 2%;
+            color: #999;
+        }
+    }
+
+    &__options, &__purchase-actions {
+        display: flex;
+        gap: 1rem;
+        align-items: center;
+    }
+
+    &__purchase-actions {
+        @media (max-width: $breakpoint-mobile) {
+            flex-wrap: wrap;
+            gap: 0.5rem;
+        }
+    }
+
+    &__option-button {
+        padding: 0.5rem 1rem;
+        border: 1px solid #ccc;
+        border-radius: 10%;
+        background-color: transparent;
+        cursor: pointer;
+        color: $text-muted;
+
+        &--active {
+            background-color: $primary-color;
+            color: $text-light;
+        }
+    }
+
+    &__quantity-input {
+        width: 3rem;
+        height: 3rem;
+        border: $border-color 1px solid;
+        border-radius: 10%;
+        text-align: center;
+    }
+
+    &__add-to-cart-button {
+        padding: 0.8rem 1.5rem;
+        border: none;
+        border-radius: $border-radius-sm;
+        background-color: $primary-color;
+        color: $text-light;
+        cursor: pointer;
+        
+        @media (max-width: $breakpoint-mobile) {
+            flex-basis: 100%;
+            margin-top: 1rem;
+            order: 3;
+            padding: 1rem;
+        }
+    }
+}
+
+/* Bloque: popular-products */
+.popular-products {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+
+    &__carousel {
+        display: flex;
+        gap: 2rem;
+        
+        @media (max-width: $breakpoint-mobile) {
+            flex-direction: column;
+            padding: 1rem;
+            align-items: center;
+        }
+    }
+}
+
+/* Bloque: product-card */
+.product-card {
+    display: flex;
+    flex-direction: column;
+    border: $border-color 1px solid;
+    border-radius: $border-radius-lg;
+    padding: 1.5rem;
+    width: 280px;
+    gap: 1rem;
+
+    @media (max-width: $breakpoint-mobile) {
+        width: 250px;
+    }
+
+    &__image-container {
+        background-color: $background-light;
+        width: 100%;
+        height: 250px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: $border-radius-lg;
+    }
+
+    &__image {
+        width: 80%;
+        height: 80%;
+        object-fit: contain;
+    }
+
+    &__price {
+        &--current {
+            color: $primary-color;
+            font-weight: bold;
+        }
+        &--old {
+            color: #999;
+        }
+    }
+}
+
+/* Bloque: site-footer */
+.site-footer {
+    background-color: $background-light;
+    padding: 4rem 2rem;
+
+    &__container {
+        display: flex;
+        gap: 4rem;
+        max-width: 1200px;
+        margin: 0 auto;
+
+        @media (max-width: $breakpoint-mobile) {
+            flex-direction: column;
+            text-align: center;
+        }
+    }
+
+    &__column {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+        flex: 1;
+
+        a {
+            text-decoration: none;
+            color: $text-color;
+        }
+    }
+
+    &__contact-item {
+        display: flex;
+        gap: 0.5rem;
+        align-items: center;
+
+        @media (max-width: $breakpoint-mobile) {
+            justify-content: center;
+        }
+    }
+    
+    .social-media { 
+        display: flex;
+        gap: 0.5rem;
+        
+        @media (max-width: $breakpoint-mobile) {
+            justify-content: center;
+        }
+    }
+
+    &__copyright {
+        text-align: center;
+        padding-top: 2rem;
+        border-top: 1px solid $border-color;
+    }
+
+    &__highlight-text {
+        color: $secondary-color;
+    }
+}
