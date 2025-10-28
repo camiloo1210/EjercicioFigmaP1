@@ -512,3 +512,103 @@ li {
 .site-footer__highlight-text {
     color: #64B496;
 }
+
+/* Mobile */
+@media (max-width: 768px) {
+
+    .nav__section--top .nav__list {
+        flex-wrap: wrap;
+        padding: 0.5rem 1rem;
+    }
+
+    .nav__section--main {
+        flex-direction: column;
+        gap: 1.5rem;
+        margin: 1rem;
+    }
+
+    .user-actions {
+        justify-content: space-around;
+        width: 100%;
+    }
+
+    .search-bar {
+        width: 100%;
+        flex-wrap: wrap;
+    }
+
+    .search-bar__input {
+        flex-grow: 1; 
+    }
+
+
+    /* --- 2. Layout del Producto --- */
+
+    .product {
+       
+        grid-template-columns: 1fr;
+    }
+
+    .filter-sidebar {
+
+        margin: 0 1rem;
+    }
+
+    .product__main-view {
+        flex-direction: column;
+    }
+
+
+    /* --- 3. Detalles y Acciones de Compra --- */
+
+    .product-details__purchase-actions {
+        flex-wrap: wrap;
+        gap: 0.5rem;
+    }
+
+    .product-details__add-to-cart-button {
+        
+        flex-basis: 100%; 
+        margin-top: 1rem;
+        order: 3;
+        padding: 1rem; 
+    }
+
+
+    /* --- 4. Productos Populares (Carrusel) --- */
+
+    .popular-products__carousel {
+        flex-direction: column;
+        padding: 1rem;
+        justify-content: flex-start; 
+    }
+
+    .product-card {
+        width: 250px; 
+    }
+
+
+    /* --- 5. Pie de Página (Footer) --- */
+
+    .site-footer__container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .site-footer__contact-item {
+        justify-content: center;
+    }
+
+    .social-media {
+        justify-content: center;
+    }
+
+    .filter-sidebar__group{
+        justify-content: center;
+    }
+    .filter-sidebar__button {
+    margin-left: auto;  
+    margin-right: auto; 
+    text-align: center;
+}
+}
