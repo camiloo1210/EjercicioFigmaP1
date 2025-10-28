@@ -1,467 +1,410 @@
 <!doctype html>
-<html lang="en-US">
-    <link rel="stylesheet" href="styles.css" />
-  <head>
+<html lang="es">
+<head>
     <meta charset="utf-8" />
-    <title>Examen P1 Camilo Brazales</title>
-  </head>
-  <!-- Body section -->
-  <body>
-    <main>
-       <nav>
-            <!--first section of the navigation system-->
-            <ul class="nav--first--section">
-                <li class="nav--item--menu">
-                    <img src="./img/menu.svg" alt="menufoto" class="nav--image">
-                </li>
-                <li>
-                    <p>Home </p>
-                    <img src="./img/down.svg" alt="downfoto" class="nav--image">
-                </li>
-                
-                <li>
-                    <p>Category </p>
-                    <img src="./img/down.svg" alt="downfoto" class="nav--image">
-                </li>
-
-                <li>
-                    <p>Products </p>
-                    <img src="./img/down.svg" alt="downfoto" class="nav--image">
-                </li>
-
-                <li>
-                    <p>Pages </p>
-                    <img src="./img/down.svg" alt="downfoto" class="nav--image">
-                </li>
-
-                <li>
-                    <p>Blog </p>
-                    <img src="./img/down.svg" alt="downfoto" class="nav--image">
-                </li>
-
-                <li>
-                    <p>Elements </p>
-                    <img src="./img/down.svg" alt="downfoto" class="nav--image">
-                </li>
-
-                <li class="nav--item--phone">
-                    <p>📞 +593 958871234 </p>
-                </li>
-            </ul>
-            ️<!--second section of the navigation system-->
-            <ul class="nav--second--section">
-                <!--logo-->
-                <li class="nav--second--section--item--logo">
-                    <img src="./img/logo.svg" alt="logofoto" >
-                </li>
-                <!--search bar-->
-                <li class="nav--second--section--item--search">
-                    <input type="text" placeholder="Search for items..." class="nav--second--section--input">
-                    <select name="" id="" class="nav--second--section--select">
+    <title>Examen P1 Camilo Brazales - Refactor BEM</title>
+    <link rel="stylesheet" href="styles.css" />
+</head>
+<!-- Body section -->
+<body>
+    <main class="main-content">
+        <!-- Bloque: nav -->
+        <nav class="nav">
+            <!-- Sección 1 del nav -->
+            <div class="nav__section nav__section--top">
+                <ul class="nav__list">
+                    <li class="nav__item nav__item--menu-toggle">
+                        <img src="./img/menu.svg" alt="menufoto" class="nav__icon">
+                    </li>
+                    <li class="nav__item">
+                        <p class="nav__text">Home</p>
+                        <img src="./img/down.svg" alt="downfoto" class="nav__icon">
+                    </li>
+                    <li class="nav__item">
+                        <p class="nav__text">Category</p>
+                        <img src="./img/down.svg" alt="downfoto" class="nav__icon">
+                    </li>
+                    <li class="nav__item">
+                        <p class="nav__text">Products</p>
+                        <img src="./img/down.svg" alt="downfoto" class="nav__icon">
+                    </li>
+                    <li class="nav__item">
+                        <p class="nav__text">Pages</p>
+                        <img src="./img/down.svg" alt="downfoto" class="nav__icon">
+                    </li>
+                    <li class="nav__item">
+                        <p class="nav__text">Blog</p>
+                        <img src="./img/down.svg" alt="downfoto" class="nav__icon">
+                    </li>
+                    <li class="nav__item">
+                        <p class="nav__text">Elements</p>
+                        <img src="./img/down.svg" alt="downfoto" class="nav__icon">
+                    </li>
+                    <li class="nav__item nav__item--phone">
+                        <p class="nav__text">📞 +593 958871234</p>
+                    </li>
+                </ul>
+            </div>
+            <!-- Sección 2 del nav -->
+            <div class="nav__section nav__section--main">
+                 <a href="#" class="nav__logo">
+                    <img src="./img/logo.svg" alt="logofoto">
+                </a>
+                <!-- Bloque: search-bar -->
+                <div class="search-bar">
+                    <input type="text" placeholder="Search for items..." class="search-bar__input">
+                    <select name="" id="" class="search-bar__select">
                         <option value="">All Categories</option>
                     </select>
-                    <button class="nav--second--section--button--search">
-                        <img src="./img/Search.svg" alt="" >
+                    <button class="search-bar__button">
+                        <img src="./img/Search.svg" alt="Search Icon">
                     </button>
-                </li>
-                <!--icons-->
-                <div class="nav--second--section--item--icons">
-                    <!--icon1-->
-                    <li>
-                        <img src="./img/Account.svg" alt="Accountfoto" >
-                        <p>Account</p>
-                    </li>
-                    <!--icon2-->
-                    <li>
-                        <img src="./img/WishList.svg" alt="WishListfoto" >
-                        <p>WishList</p>
-                    </li>
-                    <!--icon3-->
-                    <li>
-                        <img src="./img/ShoppingCart.svg" alt="Shoppingcartfoto" >
-                        <p>Shopping Cart</p>
-                    </li>
                 </div>
-            </ul>
-            <!--third section of the navigation system-->
-            <ul>
-                <li class="nav--third--section">
-                    <p class="nav--third--section--text">Product</p>
-                    <p class="nav--third--section--text"> Home - Products</p>
-                </li>
-            </ul>
-       </nav>
-       <!-- Product info section -->
-       <section class="section--product--info">
-            <!--Filter section-->
-            <div class="section--product--info--sidebar">
-                <!--Title-->
-                <h2>Product Category</h2>
-                <!--Divider-->
-                <hr style="width:75%">
-                <!--Categories-->
-                    <ul class="section--product--info--sidebar--categories">
-                        <li class="section--product--info--sidebar--categories--item">
+                <!-- Bloque: user-actions -->
+                <ul class="user-actions">
+                    <li class="user-actions__item">
+                        <img src="./img/Account.svg" alt="Accountfoto" class="user-actions__icon">
+                        <p class="user-actions__label">Account</p>
+                    </li>
+                    <li class="user-actions__item">
+                        <img src="./img/WishList.svg" alt="WishListfoto" class="user-actions__icon">
+                        <p class="user-actions__label">WishList</p>
+                    </li>
+                    <li class="user-actions__item">
+                        <img src="./img/ShoppingCart.svg" alt="Shoppingcartfoto" class="user-actions__icon">
+                        <p class="user-actions__label">Shopping Cart</p>
+                    </li>
+                </ul>
+            </div>
+            <!-- Sección 3 del nav -->
+            <div class="nav__section nav__section--breadcrumb">
+                <p class="nav__breadcrumb-title">Product</p>
+                <p class="nav__breadcrumb-path">Home - Products</p>
+            </div>
+        </nav>
+
+       <!-- Bloque: product -->
+        <section class="product">
+            <!-- Bloque: filter-sidebar -->
+            <aside class="filter-sidebar">
+                <div class="filter-sidebar__group">
+                    <h2 class="filter-sidebar__title">Product Category</h2>
+                    <hr class="filter-sidebar__divider">
+                    <ul class="filter-sidebar__list">
+                        <li class="filter-sidebar__item">
                             <input type="checkbox">
                             <p>Juice & Drinks</p>
                             <span>[20]</span>
                         </li>
-                        <li class="section--product--info--sidebar--categories--item">
+                        <li class="filter-sidebar__item">
                             <input type="checkbox">
                             <p>Dairy & Milk</p>
                             <span>[54]</span>
                         </li>
-
-                        <li class="section--product--info--sidebar--categories--item">
+                        <li class="filter-sidebar__item">
                             <input type="checkbox">
                             <p>Snack & Spice</p>
                             <span>[64]</span>
                         </li>
                     </ul>
-                <div class="section--product--info--sidebar--price--filter">
-                <h2>Filter By Price</h2>
-                <!--Divider-->
-                <hr style="width:75%">
-                <!--Price Range-->
-                <input type="range" name="" id="" class="section--product--info--sidebar--price--filter--range">
-                    <p>
-                        Price: $10 - $500
-                    </p>
-                <button class="section--product--info--sidebar--price--filter--button">Filter</button>
-                </div>    
-                <div class="section--product--info--sidebar--filter--category--color">
-                    <h2>Product Category</h2>
-                    <!--Divider-->
-                    <hr style="width:75%">
-                    <ul class="section--product--info--sidebar--filter--category--color--list">
-                        <li class="section--product--info--sidebar--filter--category--color--list--item">
+                </div>
+                <div class="filter-sidebar__group">
+                    <h2 class="filter-sidebar__title">Filter By Price</h2>
+                    <hr class="filter-sidebar__divider">
+                    <input type="range" name="" id="" class="filter-sidebar__price-range">
+                    <p>Price: $10 - $500</p>
+                    <button class="filter-sidebar__button">Filter</button>
+                </div>
+                <div class="filter-sidebar__group">
+                    <h2 class="filter-sidebar__title">Product Category</h2>
+                    <hr class="filter-sidebar__divider">
+                    <ul class="filter-sidebar__list">
+                        <li class="filter-sidebar__item">
                             <input type="checkbox">
                             <p>Blue</p>
-                            <span class="section--product--info--sidebar--filter--category--color--list--item--colorbox" style="background-color: #6C9EFF;"></span>
+                            <span class="filter-sidebar__color-box" style="background-color: #6C9EFF;"></span>
                         </li>
-                        <li class="section--product--info--sidebar--filter--category--color--list--item">
+                        <li class="filter-sidebar__item">
                             <input type="checkbox">
                             <p>Yellow</p>
-                            <span class="section--product--info--sidebar--filter--category--color--list--item--colorbox" style="background-color: #DEDE44;"></span>
+                            <span class="filter-sidebar__color-box" style="background-color: #DEDE44;"></span>
                         </li>
-                        <li>
+                         <li class="filter-sidebar__item">
                             <input type="checkbox">
                             <p>Red</p>
-                            <span class="section--product--info--sidebar--filter--category--color--list--item--colorbox" style="background-color: #FB5555;"></span>
+                            <span class="filter-sidebar__color-box" style="background-color: #FB5555;"></span>
                         </li>
-                        <li class="section--product--info--sidebar--filter--category--color--list--item">
+                        <li class="filter-sidebar__item">
                             <input type="checkbox">
                             <p>Green</p>
-                            <span class="section--product--info--sidebar--filter--category--color--list--item--colorbox" style="background-color: #64B496;"></span>
+                            <span class="filter-sidebar__color-box" style="background-color: #64B496;"></span>
+                        </li>
                     </ul>
                 </div>
-
-                <div class="section--product--info--sidebar--filter--weight">
-                    <h2>Weight</h2>
-                    <!--Divider-->
-                    <hr style="width:75%">
-                    <ul class="section--product--info--sidebar--filter--weight--list">
-                        <li class="section--product--info--sidebar--filter--weight--list--item">
+                <div class="filter-sidebar__group">
+                    <h2 class="filter-sidebar__title">Weight</h2>
+                    <hr class="filter-sidebar__divider">
+                    <ul class="filter-sidebar__list">
+                        <li class="filter-sidebar__item">
                             <input type="checkbox">
                             <p>2kg Pack</p>
                         </li>
-                        <li class="section--product--info--sidebar--filter--weight--list--item">
+                        <li class="filter-sidebar__item">
                             <input type="checkbox">
                             <p>20kg Pack</p>
                         </li>
-
-                        <li class="section--product--info--sidebar--filter--weight--list--item">
+                        <li class="filter-sidebar__item">
                             <input type="checkbox">
                             <p>30kg Pack</p>
                         </li>
-
                     </ul>
                 </div>
-
-                <div>
-                    <h2>Product Tags</h2>
-                    <!--Divider-->
-                    <hr style="width:75%">
-                    <ul class="section--product--info--sidebar--filter--tags--list">
-                        <li class="section--product--info--sidebar--filter--tags--list--item">Vegetables</li>
-                        <li class="section--product--info--sidebar--filter--tags--list--item">Juice</li>
-                        <li class="section--product--info--sidebar--filter--tags--list--item">Food</li>
-                        <li class="section--product--info--sidebar--filter--tags--list--item">Dry Fruits</li>
+                <div class="filter-sidebar__group">
+                    <h2 class="filter-sidebar__title">Product Tags</h2>
+                    <hr class="filter-sidebar__divider">
+                    <ul class="filter-sidebar__tags-list">
+                        <li class="filter-sidebar__tag">Vegetables</li>
+                        <li class="filter-sidebar__tag">Juice</li>
+                        <li class="filter-sidebar__tag">Food</li>
+                        <li class="filter-sidebar__tag">Dry Fruits</li>
                     </ul>
                 </div>
-            </div> 
-            <!--Rigth part of the frame-->
-            <div class="section--buy--product--info--colums">
-                <div class="section--buy--product--info">
-                <div >
-                    <picture class="section--buy--product--info--mainframe-picture">
-                        <img src="./img/Productmainphoto.png" alt="" class="section--buy--product--info--mainpicture">
-                    </picture>
-                    
-                    <div class="section--buy--product--info--picture--carrousel">
-                        <div class="section--buy--product--info--picture--carrousel--frame">
-                            <img src="./img/ProductImage1.png" alt="" class="section--buy--product--info--carrousel--picture">
-                        </div>
-                        <div class="section--buy--product--info--picture--carrousel--frame">
-                            <img src="./img/Productmainphoto.png" alt="" class="section--buy--product--info--carrousel--picture">
-                        </div>
+            </aside>
 
-                        <div class="section--buy--product--info--picture--carrousel--frame">
-                            <img src="./img/ProductImage2.png" alt="" class="section--buy--product--info--carrousel--picture">
-                        </div>
-
-                        <div class="section--buy--product--info--picture--carrousel--frame">
-                            <img src="./img/ProductImage3.png" alt="" class="section--buy--product--info--carrousel--picture">
-                        </div>
-
-                        <div class="section--buy--product--info--picture--carrousel--frame">
-                            <img src="./img/ProductImage4.png" alt="" class="section--buy--product--info--carrousel--picture">
+            <!-- Contenedor principal del producto -->
+            <div class="product__content">
+                <div class="product__main-view">
+                    <!-- Bloque: product-gallery -->
+                    <div class="product-gallery">
+                        <picture class="product-gallery__main-frame">
+                            <img src="./img/Productmainphoto.png" alt="Main product view" class="product-gallery__main-image">
+                        </picture>
+                        <div class="product-gallery__carousel">
+                            <div class="product-gallery__carousel-frame">
+                                <img src="./img/ProductImage1.png" alt="Product thumbnail 1" class="product-gallery__carousel-image">
+                            </div>
+                            <div class="product-gallery__carousel-frame">
+                                <img src="./img/Productmainphoto.png" alt="Product thumbnail 2" class="product-gallery__carousel-image">
+                            </div>
+                            <div class="product-gallery__carousel-frame">
+                                <img src="./img/ProductImage2.png" alt="Product thumbnail 3" class="product-gallery__carousel-image">
+                            </div>
+                            <div class="product-gallery__carousel-frame">
+                                <img src="./img/ProductImage3.png" alt="Product thumbnail 4" class="product-gallery__carousel-image">
+                            </div>
+                            <div class="product-gallery__carousel-frame">
+                                <img src="./img/ProductImage4.png" alt="Product thumbnail 5" class="product-gallery__carousel-image">
+                            </div>
                         </div>
                     </div>
-                </div>
-
-                <div class="section--buy--product--info--review">
-                    <div class="section--buy--product--info--review-item-list">
-                        <h2>Seeds Of Change</h2>
-                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Reiciendis</p>
-                        <!--Divider-->
-                        <hr style="width:100%">
-                        <div class="section--buy--product--info--review--stars">
-                            <img src="./img/Star.svg" alt="">
-                            <img src="./img/Star.svg" alt="">
-                            <img src="./img/Star.svg" alt="">
-                            <img src="./img/Star.svg" alt="">
-                            <img src="./img/Star.svg" alt="">
+                    <!-- Bloque: product-details -->
+                    <div class="product-details">
+                        <h2 class="product-details__title">Seeds Of Change</h2>
+                        <p class="product-details__subtitle">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Reiciendis</p>
+                        <hr class="product-details__divider">
+                        <div class="product-details__review-stars">
+                            <img src="./img/Star.svg" alt="Star">
+                            <img src="./img/Star.svg" alt="Star">
+                            <img src="./img/Star.svg" alt="Star">
+                            <img src="./img/Star.svg" alt="Star">
+                            <img src="./img/Star.svg" alt="Star">
                             <p>(80 reviews)</p>
                         </div>
-                        <li class="section--buy--product--info--review--additional--info">
-                            <h2>Brand:</h2>
-                            <p>Good</p>
-                        </li>
-
-                        <li class="section--buy--product--info--review--additional--info">
-                            <h2>Flavour:</h2>
-                            <p>Good</p>
-                        </li>
-                        <li class="section--buy--product--info--review--additional--info">
-                            <h2>Diet Type:</h2>
-                            <p>Good</p>
-                        </li>  
-
-                        <li class="section--buy--product--info--review--additional--info">
-                            <h2>Weight:</h2>
-                            <p>Good</p>
-                        </li>       
-                        <li class="section--buy--product--info--review--additional--info">
-                            <h2>Speciality:</h2>
-                            <p>Good</p>
-                        </li>             
-                        <li class="section--buy--product--info--review--additional--info">
-                            <h2>Info:</h2>
-                            <p>Good</p>
-                        </li>           
-                        <li class="section--buy--product--info--review--additional--info">
-                            <h2>Items:</h2>
-                            <p>Good</p>
-                        </li>                                  
-                    </div>
-                    <div class="section--buy--product--info-price--select--preferences">
-                        <h2 style="color: #FB5555;font-size: xx-large;">$120.25</h2>
-                        <s style="margin-left: 2%;">$123.25</s>
-                    </div>
-
-                    <div class="section--buy--product--info-price--select--preferences">
-                        <h2>Size/Weight:</h2>
-                        <button class="section--buy--product--info-price--select--preferences--sizeweigh" style="background-color: #F53E32; color: white;" >50kg</button>
-                        <button class="section--buy--product--info-price--select--preferences--sizeweigh" style="color: grey;" >80kg</button>
-                        <button class="section--buy--product--info-price--select--preferences--sizeweigh" style="color: grey;" >120kg</button>
-                        <button class="section--buy--product--info-price--select--preferences--sizeweigh" style="color: grey;" >200kg</button>
-                    </div>
-                    <div class="section--buy--product--info--select--quantity">
-                        <input type="text" class="section--buy--product--info--select--quantity--box" placeholder="     1 ">
-                            <div class="section--buy--product--info--select--quantity--box-add">
-                                <input type="text" class="section--buy--product--info--select--quantity--box" placeholder="     + ">
-                                <input type="text" class="section--buy--product--info--select--quantity--box" placeholder="     - ">
+                        <ul class="product-details__info-list">
+                            <li class="product-details__info-item"><h2>Brand:</h2><p>Good</p></li>
+                            <li class="product-details__info-item"><h2>Flavour:</h2><p>Good</p></li>
+                            <li class="product-details__info-item"><h2>Diet Type:</h2><p>Good</p></li>
+                            <li class="product-details__info-item"><h2>Weight:</h2><p>Good</p></li>
+                            <li class="product-details__info-item"><h2>Speciality:</h2><p>Good</p></li>
+                            <li class="product-details__info-item"><h2>Info:</h2><p>Good</p></li>
+                            <li class="product-details__info-item"><h2>Items:</h2><p>Good</p></li>
+                        </ul>
+                        <div class="product-details__price-section">
+                            <h2 class="product-details__price product-details__price--current">$120.25</h2>
+                            <s class="product-details__price product-details__price--old">$123.25</s>
+                        </div>
+                        <div class="product-details__options">
+                            <h2 class="product-details__options-title">Size/Weight:</h2>
+                            <button class="product-details__option-button product-details__option-button--active">50kg</button>
+                            <button class="product-details__option-button">80kg</button>
+                            <button class="product-details__option-button">120kg</button>
+                            <button class="product-details__option-button">200kg</button>
+                        </div>
+                        <div class="product-details__purchase-actions">
+                            <input type="text" class="product-details__quantity-input" placeholder="1">
+                            <div class="product-details__quantity-controls">
+                                <button class="product-details__quantity-button">+</button>
+                                <button class="product-details__quantity-button">-</button>
                             </div>
-                        <button class="section--buy--product--info--button--addcart" style="background-color: #F53E32; color: white;" >Add to Cart</button>
-                        <button class="section--buy--product--info--button--actions">
-                            <img src="./img/WishList.svg" alt="">
-                        </button>
-                        
-                        <button class="section--buy--product--info--button--actions">
-                            <img src="./img/View.svg" alt="">
-                        </button>
+                            <button class="product-details__add-to-cart-button">Add to Cart</button>
+                            <button class="product-details__action-button">
+                                <img src="./img/WishList.svg" alt="Add to wishlist">
+                            </button>
+                            <button class="product-details__action-button">
+                                <img src="./img/View.svg" alt="Compare">
+                            </button>
+                        </div>
                     </div>
                 </div>
-            </div>
-                <div class="section--product--description">
-                    <div class="section--product--description--pages">
-                        <h2>Description</h2>
-                        <h2>Information</h2>
-                        <h2>Review</h2>
+                <!-- Bloque: product-description -->
+                <div class="product-description">
+                    <div class="product-description__tabs">
+                        <h2 class="product-description__tab-title">Description</h2>
+                        <h2 class="product-description__tab-title">Information</h2>
+                        <h2 class="product-description__tab-title">Review</h2>
                     </div>
-                    <div class="section--product--description--content">
+                    <div class="product-description__content">
                         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit...</p>
                         <h3>Packaging & Delivery</h3>
                         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit...</p>
                     </div>
                 </div>
             </div>
-       </section >
-        <!-- More products section -->
+        </section>
 
-        <section class="section--more-products">
-            <h2>Popular Products</h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et viverra maecenas accumsan lacus vel facilisis.</p>
-            <div class="section--more-products--carrousel">
-                <div class="section--more-products--carrousel--item">
-                    <div class="section--more-products--carrousel--item--foto">
-                        <img src="./img/ProductImage1.png" alt="">
+        <!-- Bloque: popular-products -->
+        <section class="popular-products">
+            <h2 class="popular-products__title">Popular Products</h2>
+            <p class="popular-products__subtitle">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et viverra maecenas accumsan lacus vel facilisis.</p>
+            <div class="popular-products__carousel">
+                <!-- Bloque: product-card -->
+                <div class="product-card">
+                    <div class="product-card__image-container">
+                        <img src="./img/ProductImage1.png" alt="Snack product image" class="product-card__image">
                     </div>
-                    <p>Snacks</p>
-                    <div>
-                        <img src="./img/Star.svg" alt="">
-                        <img src="./img/Star.svg" alt="">
-                        <img src="./img/Star.svg" alt="">
-                        <img src="./img/Star.svg" alt="">
-                        <img src="./img/Star.svg" alt="">
+                    <p class="product-card__category">Snacks</p>
+                    <div class="product-card__rating">
+                        <img src="./img/Star.svg" alt="Star">
+                        <img src="./img/Star.svg" alt="Star">
+                        <img src="./img/Star.svg" alt="Star">
+                        <img src="./img/Star.svg" alt="Star">
+                        <img src="./img/Star.svg" alt="Star">
                         <span>(4.5)</span>
                     </div>
-                    <h3>Best snakes with hazel nut mix pack 200gm</h3>
-                    <div>
-                        <span style="color: #F53E32; font-weight: bold;">$120.25</span>
-                        <s style="color: #999;">$123.25</s>
+                    <h3 class="product-card__title">Best snakes with hazel nut mix pack 200gm</h3>
+                    <div class="product-card__price-info">
+                        <span class="product-card__price product-card__price--current">$120.25</span>
+                        <s class="product-card__price product-card__price--old">$123.25</s>
                     </div>
                 </div>
-
-                <div class="section--more-products--carrousel--item">
-                    <div class="section--more-products--carrousel--item--foto">
-                        <img src="./img/Productmainphoto.png" alt="">
+                <div class="product-card">
+                    <div class="product-card__image-container">
+                        <img src="./img/Productmainphoto.png" alt="Snack product image" class="product-card__image">
                     </div>
-                    <p>Snacks</p>
-                    <div>
-                        <img src="./img/Star.svg" alt="">
-                        <img src="./img/Star.svg" alt="">
-                        <img src="./img/Star.svg" alt="">
-                        <img src="./img/Star.svg" alt="">
-                        <img src="./img/Star.svg" alt="">
+                    <p class="product-card__category">Snacks</p>
+                    <div class="product-card__rating">
+                        <img src="./img/Star.svg" alt="Star">
+                        <img src="./img/Star.svg" alt="Star">
+                        <img src="./img/Star.svg" alt="Star">
+                        <img src="./img/Star.svg" alt="Star">
+                        <img src="./img/Star.svg" alt="Star">
                         <span>(5.0)</span>
                     </div>
-                    <h3>Sweet snakes crunchy nut mix 250gm pack</h3>
-                    <div>
-                        <span style="color: #F53E32; font-weight: bold;">$100.00</span>
-                        <s style="color: #999;">$110.00</s>
+                    <h3 class="product-card__title">Sweet snakes crunchy nut mix 250gm pack</h3>
+                     <div class="product-card__price-info">
+                        <span class="product-card__price product-card__price--current">$100.00</span>
+                        <s class="product-card__price product-card__price--old">$110.00</s>
                     </div>
                 </div>
-
-                <div class="section--more-products--carrousel--item">
-                    <div class="section--more-products--carrousel--item--foto">
-                        <img src="./img/ProductImage2.png" alt="">
+                <div class="product-card">
+                    <div class="product-card__image-container">
+                        <img src="./img/ProductImage2.png" alt="Snack product image" class="product-card__image">
                     </div>
-                    <p>Snacks</p>
-                    <div>
-                        <img src="./img/Star.svg" alt="">
-                        <img src="./img/Star.svg" alt="">
-                        <img src="./img/Star.svg" alt="">
-                        <img src="./img/Star.svg" alt="">
-                        <img src="./img/Star.svg" alt="">
+                    <p class="product-card__category">Snacks</p>
+                    <div class="product-card__rating">
+                        <img src="./img/Star.svg" alt="Star">
+                        <img src="./img/Star.svg" alt="Star">
+                        <img src="./img/Star.svg" alt="Star">
+                        <img src="./img/Star.svg" alt="Star">
+                        <img src="./img/Star.svg" alt="Star">
                         <span>(4.5)</span>
                     </div>
-                    <h3>Best snakes with hazel nut mix pack 200gm</h3>
-                    <div>
-                        <span style="color: #F53E32; font-weight: bold;">$120.25</span>
-                        <s style="color: #999;">$123.25</s>
+                    <h3 class="product-card__title">Best snakes with hazel nut mix pack 200gm</h3>
+                     <div class="product-card__price-info">
+                        <span class="product-card__price product-card__price--current">$120.25</span>
+                        <s class="product-card__price product-card__price--old">$123.25</s>
                     </div>
                 </div>
-
-                <div class="section--more-products--carrousel--item">
-                    <div class="section--more-products--carrousel--item--foto">
-                        <img src="./img/ProductImage3.png" alt="">
+                <div class="product-card">
+                    <div class="product-card__image-container">
+                        <img src="./img/ProductImage3.png" alt="Snack product image" class="product-card__image">
                     </div>
-                    <p>Snacks</p>
-                    <div>
-                        <img src="./img/Star.svg" alt="">
-                        <img src="./img/Star.svg" alt="">
-                        <img src="./img/Star.svg" alt="">
-                        <img src="./img/Star.svg" alt="">
-                        <img src="./img/Star.svg" alt="">
+                    <p class="product-card__category">Snacks</p>
+                    <div class="product-card__rating">
+                        <img src="./img/Star.svg" alt="Star">
+                        <img src="./img/Star.svg" alt="Star">
+                        <img src="./img/Star.svg" alt="Star">
+                        <img src="./img/Star.svg" alt="Star">
+                        <img src="./img/Star.svg" alt="Star">
                         <span>(5.0)</span>
                     </div>
-                    <h3>Sweet snakes crunchy nut mix 250gm pack</h3>
-                    <div>
-                        <span style="color: #F53E32; font-weight: bold;">$100.00</span>
-                        <s style="color: #999;">$110.00</s>
+                    <h3 class="product-card__title">Sweet snakes crunchy nut mix 250gm pack</h3>
+                     <div class="product-card__price-info">
+                        <span class="product-card__price product-card__price--current">$100.00</span>
+                        <s class="product-card__price product-card__price--old">$110.00</s>
                     </div>
                 </div>
             </div>
         </section>
-        <!--contact-->
-            <section class="section-contact">
-                <div class="section-contact--container">
-                    <div class="section-contact--info">
-                        <div>
-                            <img src="./img/logo.svg" alt="logo">
-                        </div>
-                        <p>A Treasure of Tastes</p>
-                        <p>FoodTrove is the biggest market of grocery products. Get your daily needs from our store.</p>
-                        <div>
-                            <img src="./img/location.svg" alt="">
-                            <p>51 Green St.Huntington ohaio beach ontario, NY 11746 KY 4783, USA.</p>
-                        </div>
-                        <div>
-                            <img src="./img/email.svg" alt="">
-                            <p>example@email.com</p>
-                        </div>
-                        <div>
-                            <img src="./img/phone.svg" alt="">
-                            <p>+91 123 4567890</p>
-                        </div>
-                    </div>
 
-                    <div class="section-contact--links">
-                        <h3>Company</h3>
-                        <p>About Us</p>
-                        <p>Delivery Information</p>
-                        <p>Privacy Policy</p>
-                        <p>Terms & Conditions</p>
-                        <p>contact Us</p>
-                        <p>Support Center</p>
+        <!-- Bloque: site-footer -->
+        <footer class="site-footer">
+            <div class="site-footer__container">
+                <div class="site-footer__column">
+                    <img src="./img/logo.svg" alt="logo" class="site-footer__logo">
+                    <p class="site-footer__tagline">A Treasure of Tastes</p>
+                    <p>FoodTrove is the biggest market of grocery products. Get your daily needs from our store.</p>
+                    <div class="site-footer__contact-item">
+                        <img src="./img/location.svg" alt="Location icon">
+                        <p>51 Green St.Huntington ohaio beach ontario, NY 11746 KY 4783, USA.</p>
                     </div>
-
-                    <div class="section-contact--links">
-                        <h3>Category</h3>
-                        <p>Dairy & Bakery</p>
-                        <p>Fruits & Vegetable</p>
-                        <p>Snack & Spice</p>
-                        <p>Juice & Drinks</p>
-                        <p>Chicken & Meat</p>
-                        <p>Fast Food</p>
+                    <div class="site-footer__contact-item">
+                        <img src="./img/email.svg" alt="Email icon">
+                        <p>example@email.com</p>
                     </div>
-
-                    <div class="section-contact--newsletter">
-                        <h3>Subscribe Our Newsletter</h3>
-                        <div>
-                            <input type="text" placeholder="Search here...">
-                            <button>
-                                <img src="./img/send.svg" alt="">
-                            </button>
-                        </div>
-                        <div>
-                            <img src="./img/facebook.svg" alt="">
-                            <img src="./img/twitter.svg" alt="">
-                            <img src="./img/pinterest.svg" alt="">
-                            <img src="./img/instagram.svg" alt="">
-                        </div>
+                    <div class="site-footer__contact-item">
+                        <img src="./img/phone.svg" alt="Phone icon">
+                        <p>+91 123 4567890</p>
                     </div>
                 </div>
-
-
-            </section>
-        <footer class="section-contact--footer" >
-                <div>
-                    <p>© 2025 <span style="color: #64B496;">foodzy</span>, All rights reserved.</p>
+                <div class="site-footer__column">
+                    <h3 class="site-footer__title">Company</h3>
+                    <a href="#" class="site-footer__link">About Us</a>
+                    <a href="#" class="site-footer__link">Delivery Information</a>
+                    <a href="#" class="site-footer__link">Privacy Policy</a>
+                    <a href="#" class="site-footer__link">Terms & Conditions</a>
+                    <a href="#" class="site-footer__link">Contact Us</a>
+                    <a href="#" class="site-footer__link">Support Center</a>
                 </div>
+                <div class="site-footer__column">
+                    <h3 class="site-footer__title">Category</h3>
+                    <a href="#" class="site-footer__link">Dairy & Bakery</a>
+                    <a href="#" class="site-footer__link">Fruits & Vegetable</a>
+                    <a href="#" class="site-footer__link">Snack & Spice</a>
+                    <a href="#" class="site-footer__link">Juice & Drinks</a>
+                    <a href="#" class="site-footer__link">Chicken & Meat</a>
+                    <a href="#" class="site-footer__link">Fast Food</a>
+                </div>
+                <div class="site-footer__column">
+                    <h3 class="site-footer__title">Subscribe Our Newsletter</h3>
+                    <div class="newsletter-form">
+                        <input type="text" placeholder="Search here..." class="newsletter-form__input">
+                        <button class="newsletter-form__button">
+                            <img src="./img/send.svg" alt="Send icon">
+                        </button>
+                    </div>
+                    <div class="social-media">
+                        <a href="#" class="social-media__link"><img src="./img/facebook.svg" alt="Facebook"></a>
+                        <a href="#" class="social-media__link"><img src="./img/twitter.svg" alt="Twitter"></a>
+                        <a href="#" class="social-media__link"><img src="./img/pinterest.svg" alt="Pinterest"></a>
+                        <a href="#" class="social-media__link"><img src="./img/instagram.svg" alt="Instagram"></a>
+                    </div>
+                </div>
+            </div>
+            <div class="site-footer__copyright">
+                <p>© 2025 <span class="site-footer__highlight-text">foodzy</span>, All rights reserved.</p>
+            </div>
         </footer>
     </main>
-  </body>
+</body>
 </html>
